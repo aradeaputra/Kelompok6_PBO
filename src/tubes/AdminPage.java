@@ -77,7 +77,7 @@ public class AdminPage extends javax.swing.JFrame {
     }
     
     private void hapusMK(String kode) throws SQLException{
-        String sql = "DELETE FROM mata_kuliah WHERE nip=?";
+        String sql = "DELETE FROM mata_kuliah WHERE kode_mk=?";
         PreparedStatement ps = conn.prepareStatement(sql);
         ps.setString(1, kode);
         ps.executeUpdate();
